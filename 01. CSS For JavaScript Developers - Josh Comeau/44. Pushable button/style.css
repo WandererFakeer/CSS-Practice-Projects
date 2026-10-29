@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  display: grid;
+  place-content: center;
+}
+
+.button-container{
+  background: hsl(345, 100%, 20%);
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
+/* To make it appear and have a 3D type effect, apply transform: translateY(-10%) on the .button */
+.button{
+  display: block;
+  background: hsl(345, 100%, 46%);
+  width: 10rem;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.7rem;
+  font-size: calc(20 / 16 * 1rem);
+  font-weight: 500;
+  will-change: transform;
+  transform: translateY(-8%);
+  transition: transform 500ms;
+}
+
+.button:hover, .button:focus-visible{
+  transform: translateY(-10%);
+  transition: transform 250ms;
+}
+
+.button:active{
+  transform: translateY(-4%);
+  transition: transform 100ms;
+}

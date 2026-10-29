@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --width: clamp(80%, 100% - 2rem, 1100px);
+}
+
+.container{
+  background: black;
+  width: var(--width);
+  height: min(80vh, 80vmin);
+  margin: 1rem auto;
+  outline: 3px solid;
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.one {
+  background-color: pink;
+}
+
+.two {
+  background-color: pink;
+}
+
+.three {
+  background-color: lavender;
+}
+
+.four {
+  background-color: lavender;
+}
+
+.five {
+  background-color: honeydew;
+}
+
+.six {
+  background-color: honeydew;
+}
+
+.one, .six{
+  width: calc(var(--width) * 0.25);
+}
+
+.two, .five{
+  width: calc(var(--width) * 0.75);
+}
+
+.three, .four{
+  width: calc(var(--width) * 0.5);
+}
+
+.box:nth-of-type(odd){
+  justify-self: end;
+}

@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: slateblue;
+  width: min(80%, 500px);
+  margin: 3rem auto 0;
+  padding: 1rem 0;
+  border-radius: 0.4rem;
+  display: grid;
+  place-items: center;
+}
+
+.element-container {
+  background: linear-gradient(to bottom, white 60%, hsl(200, 0%, 90%) 40%);
+  width: 93%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.heading {
+  font-size: 1.3rem;
+}
+
+.button-flex-container {
+  margin-block-start: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-cancel {
+  background: white;
+  outline: 2px solid hsl(200, 0%, 50%);
+  font-weight: 500;
+}
+
+.button-cancel:hover,
+.button-cancel:focus-visible {
+  background-color: hsl(200 0% 50% / 0.7);
+}
+
+.button-ok {
+  background: hsl(200, 0%, 20%);
+  color: white;
+  text-transform: uppercase;
+}
+
+.button-ok:hover,
+.button-ok:focus-visible {
+  background-color: hsl(200 0% 20% / 0.8);
+}

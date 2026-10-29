@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Module 5 Workshop</title>
+  </head>
+  <body>
+    <!-- 01. Superheader section -->
+
+    <div class="superheader">
+      <div class="container flex-superheader">
+        <p class="superheader-line">
+          Free shipping on domestic orders over $75!
+        </p>
+
+        <nav class="superheader-help">
+          <input type="text" placeholder="Search..." class="searchbar" />
+
+          <a href="#help-link" class="superheader-link">Help</a>
+
+          <a href="#cart-link" class="image-link"
+            ><img src="assets/shopping-bag.png" alt="" class="shopping-bag"
+          /></a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- 02. Header section -->
+      <header class="header">
+        <!-- Add a space equalizer container to distribute extra space equally to the left and right side of unordered list -->
+        <div class="equal-spacer">
+          <h1 class="logo">Sole&Ankle</h1>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="#sale" class="nav-link first-nav">Sale</a>
+            </li>
+
+            <li class="nav-list-item">
+              <a href="#new-releases" class="nav-link">New Releases</a>
+            </li>
+
+            <li class="nav-list-item">
+              <a href="#non-binary" class="nav-link">Non-binary</a>
+            </li>
+
+            <li class="nav-list-item">
+              <a href="#men" class="nav-link">Men</a>
+            </li>
+
+            <li class="nav-list-item">
+              <a href="#women" class="nav-link">Women</a>
+            </li>
+
+            <li class="nav-list-item">
+              <a href="#kids" class="nav-link">Kids</a>
+            </li>
+
+            <li class="nav-list-item">
+              <a href="#collections" class="nav-link">Collections</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Add a space equalizer container to distribute extra space equally to the left and right side of unordered list -->
+        <div class="equal-spacer only-small-screens">
+          <a href="" class="image-link"
+            ><img
+              src="assets/shopping-bag.png"
+              alt=""
+              class="icon shopping-bag"
+          /></a>
+
+          <a href="" class="image-link"
+            ><img
+              src="assets/magnifying.png"
+              alt="Magnifier"
+              class="icon magnifier"
+          /></a>
+
+          <a href="" class="image-link"
+            ><img
+              src="assets/hamburger.png"
+              alt="Hamburger"
+              class="icon hamburger"
+          /></a>
+        </div>
+      </header>
+
+      <!-- 03. Sidebar and Main section -->
+      <section class="sidebar-main">
+        <!-- 03. I. Aside section -->
+        <aside class="sidebar">
+          <p class="aside-line">
+            <a href="#home" class="aside-heading-link">Home</a> /
+            <a href="#sale" class="aside-heading-link">Sale</a> /
+            <a href="#shoes" class="aside-heading-link">Shoes</a>
+          </p>
+
+          <nav class="aside-nav">
+            <ul class="sports-list">
+              <li class="sports-item">
+                <a href="#lifestyle" class="sports-link">Lifestyle</a>
+              </li>
+
+              <li class="sports-item">
+                <a href="#jordan" class="sports-link">Jordan</a>
+              </li>
+
+              <li class="sports-item">
+                <a href="#running" class="sports-link selected-sports-link"
+                  >Running</a
+                >
+              </li>
+
+              <li class="sports-item">
+                <a href="#basketball" class="sports-link">Basketball</a>
+              </li>
+
+              <li class="sports-item">
+                <a href="#training-&-gym" class="sports-link">Training & Gym</a>
+              </li>
+
+              <li class="sports-item">
+                <a href="#football" class="sports-link">Football</a>
+              </li>
+
+              <li class="sports-item">
+                <a href="#skateboarding" class="sports-link">Skateboarding</a>
+              </li>
+
+              <li class="sports-item">
+                <a href="#american-football" class="sports-link"
+                  >American Football</a
+                >
+              </li>
+
+              <li class="sports-item">
+                <a href="#baseball" class="sports-link">Baseball</a>
+              </li>
+
+              <li class="sports-item">
+                <a href="#golf" class="sports-link">Golf</a>
+              </li>
+
+              <li class="sports-item">
+                <a href="#tennis" class="sports-link">Tennis</a>
+              </li>
+
+              <li class="sports-item">
+                <a href="#athletics" class="sports-link">Athletics</a>
+              </li>
+
+              <li class="sports-item">
+                <a href="#walking" class="sports-link">Walking</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <!-- 03. II. Main section -->
+        <main class="main">
+          <header class="main-header">
+            <h2 class="category">Running</h2>
+
+            <div class="sorting">
+              <span class="sort">Sort</span>
+
+              <select name="sorting-options" id="sorting-options">
+                <option value="sorting-option">Newest Releases</option>
+                <option value="sorting-option">Price</option>
+              </select>
+            </div>
+          </header>
+
+          <div class="card-grid">
+            <article class="card">
+              <a href="">
+                <img
+                  src="assets/1.jpg"
+                  alt="NikeCourt Tech Challenge 20 Shoe"
+                  class="shoe-image"
+                />
+              </a>
+
+              <div class="card-text">
+                <span class="shoe-name">NikeCourt Tech Challenge 20</span>
+                <span class="price">$165</span>
+                <span class="color-quantity">2 colors</span>
+              </div>
+
+              <span class="shoe-tag">Just released!</span>
+            </article>
+
+            <article class="card">
+              <a href="">
+                <img
+                  src="assets/2.jpg"
+                  alt="Nike Metcon 5 AMP Shoe"
+                  class="shoe-image"
+                />
+              </a>
+
+              <div class="card-text">
+                <span class="shoe-name">Nike Metcon 5 AMP</span>
+                <span class="price">$165</span>
+                <span class="color-quantity">1 color</span>
+              </div>
+
+              <span class="shoe-tag">Just released!</span>
+            </article>
+
+            <article class="card">
+              <a href="">
+                <img
+                  src="assets/3.jpg"
+                  alt="Nike Phantom Vision Shoe"
+                  class="shoe-image"
+                />
+              </a>
+
+              <div class="card-text">
+                <span class="shoe-name">Nike Phantom Vision</span>
+                <span class="price">$165</span>
+                <span class="color-quantity">4 colors</span>
+              </div>
+
+              <span class="shoe-tag">Just released!</span>
+            </article>
+
+            <article class="card">
+              <a href="">
+                <img
+                  src="assets/4.jpg"
+                  alt="Nike Air Zoom Pegasus 36 Trail Shoe"
+                  class="shoe-image"
+                />
+              </a>
+
+              <div class="card-text">
+                <span class="shoe-name">Nike Air Zoom Pegasus 36 Trail</span>
+                <span class="price">$165</span>
+                <span class="color-quantity">1 color</span>
+              </div>
+
+              <span class="shoe-tag">Just released!</span>
+            </article>
+
+            <article class="card">
+              <a href="">
+                <img
+                  src="assets/5.jpg"
+                  alt="Nike Joyride Dual Run Shoe"
+                  class="shoe-image"
+                />
+              </a>
+
+              <div class="card-text">
+                <span class="shoe-name">Nike Joyride Dual Run</span>
+                <span class="price">$170</span>
+                <span class="color-quantity">2 colors</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <a href="">
+                <img
+                  src="assets/6.jpg"
+                  alt="Nike Tiempo Legend 8 Academy TF Shoe"
+                  class="shoe-image"
+                />
+              </a>
+
+              <div class="card-text">
+                <span class="shoe-name">Nike Tiempo Legend 8 Academy TF</span>
+                <span class="price old-price">$165</span>
+                <span class="color-quantity">8 colors</span>
+                <span class="price new-price">$125</span>
+              </div>
+
+              <span class="shoe-tag sale-tag">Sale</span>
+            </article>
+
+            <article class="card">
+              <a href="">
+                <img
+                  src="assets/7.jpg"
+                  alt="Nike React Infinity Run Flyknit"
+                  class="shoe-image"
+                />
+              </a>
+
+              <div class="card-text">
+                <span class="shoe-name">Nike React Infinity Run Flyknit</span>
+                <span class="price old-price">$170</span>
+                <span class="color-quantity">2 colors</span>
+                <span class="price new-price">$165</span>
+              </div>
+
+              <span class="shoe-tag sale-tag">Sale</span>
+            </article>
+
+            <article class="card">
+              <a href="">
+                <img
+                  src="assets/8.jpg"
+                  alt="Nike React Phantom Run Flyknit 2"
+                  class="shoe-image"
+                />
+              </a>
+
+              <div class="card-text">
+                <span class="shoe-name">Nike React Phantom Run Flyknit 2</span>
+                <span class="price old-price">$170</span>
+                <span class="color-quantity">2 colors</span>
+                <span class="price new-price">$165</span>
+              </div>
+
+              <span class="shoe-tag sale-tag">Sale</span>
+            </article>
+          </div>
+        </main>
+      </section>
+    </div>
+  </body>
+</html>

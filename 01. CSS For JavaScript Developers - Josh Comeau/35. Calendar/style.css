@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: min(50ch, 80%);
+  margin: 1rem auto;
+  padding: 1em;
+  outline: 3px solid hsl(0deg 0% 2%);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1em;
+}
+
+.day{
+  aspect-ratio: 1;
+  outline: 1px solid hsl(0deg 0% 2%);
+  border-radius: 0.2rem;
+  font-weight: 600;
+  display: grid;
+  place-content: center;
+}

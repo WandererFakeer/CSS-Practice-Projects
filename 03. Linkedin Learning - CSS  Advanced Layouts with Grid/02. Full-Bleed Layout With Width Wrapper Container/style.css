@@ -1,0 +1,189 @@
+@font-face{
+  font-family: "helvetica";
+  src: url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("woff"),
+       url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("opentype"),
+       url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("truetype");
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "helvetica", sans-serif;
+  line-height: 1.5;
+}
+
+:root{
+  --spacer: 0.5rem;
+  --color-one: rgb(6, 186, 240);
+  --color-two: rgb(255, 255, 0);
+  --color-three: rgb(0, 0, 0);
+  --color-four: rgb(244, 228, 209);
+  --color-five: rgb(51, 51, 51);
+  --color-six: rgb(255, 255, 255);
+  --color-seven: rgb(249, 104, 77);
+  --color-eight: rgb(6, 186, 240);
+  --color-nine: rgb(76, 91, 92);
+  --color-ten: #f0c808;
+  --font-size-one: calc(18 / 16 * 1rem);
+  --font-size-two: calc(27 / 16 * 1rem);
+  --font-size-three: calc(14.4 / 16 * 1rem);
+}
+
+.container{
+  width: min(95%, calc(950 / 16 * 1rem));
+  margin: 0 auto;
+}
+
+/* 01. Header section */
+.header{
+  background: var(--color-one);
+  padding-block-end: calc(var(--spacer) * 4);
+}
+
+.header-image{
+  width: 100%;
+  height: calc(120 / 16 * 1rem);
+  object-fit: contain;
+  margin-block-end: calc(var(--spacer) * 2);
+  padding-block-start: calc(var(--spacer) * 2);
+}
+
+.header-list{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacer);
+}
+
+.header-list-item{
+  background: var(--color-two);
+  padding: var(--spacer) calc(var(--spacer) * 2);
+}
+
+.header-link{
+  color: var(--color-three);
+  font-size: var(--font-size-one);
+  text-decoration: none;
+}
+
+/* 02. Main section */
+.main{
+  background: var(--color-four);
+  padding: calc(var(--spacer) * 12) 0;
+}
+
+.main-heading{
+  margin-block-end: var(--spacer);
+  font-size: var(--font-size-two);
+}
+
+.main-para{
+  font-size: var(--font-size-one);
+}
+
+/* 03. Aside One section */
+.aside-one{
+  background: var(--color-five);
+  padding: calc(var(--spacer) * 2) 0;
+}
+
+.aside-one-grid{
+  background: var(--color-six);
+  padding: calc(var(--spacer) * 2);
+  display: grid;
+  gap: calc(var(--spacer) * 5);
+  
+  @media (min-width: calc(800 / 16 * 1rem)){
+    background: revert;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--spacer) * 2);
+  }
+    
+}
+
+.aside-one-story{
+  display: grid;
+  align-items: start;
+  gap: calc(var(--spacer) * 3);
+  
+  @media (min-width: calc(800 / 16 * 1rem)){
+    background: var(--color-six);
+    padding: calc(var(--spacer) * 2);
+  }
+   
+}
+
+.aside-one-story-image{
+  max-width: 100%;
+}
+
+.aside-one-story-heading{
+  font-size: var(--font-size-two);
+}
+
+.aside-one-story-para{
+  font-size: var(--font-size-one);
+}
+
+/* 04. Aside Two section */
+.aside-two{
+  padding: calc(var(--spacer) * 12) 0;
+  font-size: var(--font-size-one);
+}
+
+/* 05. Aside Three section */
+.aside-three-grid{
+   
+  @media (min-width: calc(800 / 16 * 1rem)){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+   
+}
+
+.aside-three-card:first-of-type{
+  background: var(--color-seven);
+}
+
+.aside-three-card:last-of-type{
+  background: var(--color-eight);
+}
+
+.aside-three-card{
+  padding: calc(var(--spacer) * 6) calc(var(--spacer) * 2);
+  display: grid;
+  gap: calc(var(--spacer) * 2);
+}
+
+.aside-three-card-heading{
+  font-size: var(--font-size-two);
+}
+
+.aside-three-card-para{
+  font-size: var(--font-size-one);
+}
+
+/* 06. Footer section */
+.footer{
+  background: var(--color-nine);
+  padding: calc(var(--spacer) * 4) calc(var(--spacer) * 2);
+  color: var(--color-six);
+  font-size: var(--font-size-three);
+  text-align: center;
+}
+
+.footer-link{
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-link:last-of-type{
+  text-decoration: revert;
+}
+
+.footer-link:last-of-type:hover, .footer-link:last-of-type:focus-visible{
+  color: var(--color-ten);
+}

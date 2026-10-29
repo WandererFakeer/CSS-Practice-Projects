@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: #006a4e;
+  width: min(90%, 850px);
+  height: 60vmin;
+  margin: 3rem auto 0;
+  outline: 1px solid;
+  position: relative;
+}
+
+.grid-container {
+  display: grid;
+  align-items: center;
+}
+
+.icon {
+  background: #f42a41;
+  width: 10rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  left: 45%;
+  transform: translateX(-45%);
+}

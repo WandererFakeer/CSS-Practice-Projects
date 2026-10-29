@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  background: rgb(230, 237, 254);
+  width: min(90%, 600px);
+  margin: 3rem auto 0;
+  padding: 2rem 0.5rem;
+}
+
+.flex-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.javascript {
+  width: 15%;
+  height: 12%;
+}
+
+.javascript-track-record {
+  flex: 1;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.track-heading {
+  margin-bottom: 0.5rem;
+  color: #130b43;
+  font-size: 1.2rem;
+}
+
+.progress-bar {
+  height: 1rem;
+  border-radius: 0.4rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.complete-bar {
+  background: blue;
+  width: 20%;
+}
+
+.track-record-calculation {
+  color: #5c5589;
+}
+
+.chevron {
+  width: auto;
+  height: 1.5rem;
+  align-self: center;
+}

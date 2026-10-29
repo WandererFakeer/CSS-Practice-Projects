@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Wotfard';
+  src: url('https://sandpack-bundler.vercel.app/fonts/wotfard/wotfard-semibold-webfont.woff2')
+    format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Wotfard';
+  src: url('https://sandpack-bundler.vercel.app/fonts/wotfard/wotfard-medium-webfont.woff2')
+    format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Wotfard';
+  src: url('https://sandpack-bundler.vercel.app/fonts/wotfard/wotfard-regular-webfont.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Wotfard", sans-serif;
+}
+
+:root{
+  --space: clamp(0.5rem, 0.4746rem + 0.678vw, 1rem);
+}
+
+body{
+  background-color: oklch(0.7437 0.0535 283.46);
+  padding: 3rem 1rem;
+}
+
+article{
+  background-color: oklch(1 0 0);
+  inline-size: min(100%, 350 / 16 * 1rem);
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  position: relative;
+  box-shadow: 0px 2px 8px oklch(0.5127 0.1081 280.37 / 50%);
+}
+
+:where(header, .description){
+  margin-inline: var(--space);
+}
+
+figure{
+  margin-block-end: 1rem;
+  margin-inline: calc(var(--space) * -1);
+}
+
+img{
+  inline-size: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: block;
+}
+
+.flag{
+  background-color: oklch(0.9533 0.0782 98.13);
+  inline-size: fit-content;
+  padding: 0.5rem var(--space);
+  border-radius: 0.25rem 1rem 1rem 0.25rem;
+  font-weight: 500;
+  position: absolute;
+  inset-block-start: 0.5rem;
+  inset-inline-start: -0.5rem;
+  box-shadow: 0px 1px 2px oklch(0.6684 0.1081 98.04 / 20%);
+}
+
+.name{
+  inline-size: fit-content;
+  margin-inline-end: 0.25rem;
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-box: trim-both cap alphabetic;
+}
+
+.series-name{
+  inline-size: fit-content;
+  display: inline;
+  color: oklch(0.4184 0 0);
+  text-box: trim-both cap alphabetic;
+}
+
+.description{
+  margin-block: 1rem;
+  padding-block-end: 1rem;
+  line-height: 1.5;
+}

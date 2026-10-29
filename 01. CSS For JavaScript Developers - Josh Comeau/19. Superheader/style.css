@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.super-header {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: 1px 1px 8px hsl(200, 0%, 54%);
+  border-radius: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.para {
+  margin-right: auto;
+}
+
+.search,
+.lang-button {
+  padding: 0.2rem 0.5rem;
+}
+
+.lang-button {
+  cursor: pointer;
+  transition: 0.2;
+}
+
+.lang-button:hover,
+.lang-button:focus-visible {
+  background: rgb(0 0 0 / 0.3);
+}

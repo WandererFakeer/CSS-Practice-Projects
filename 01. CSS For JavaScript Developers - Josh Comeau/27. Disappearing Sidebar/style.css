@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: hsl(225, 28.6%, 40%);
+}
+
+.skip-link {
+  background: #005a9c;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  gap: 3rem;
+
+  @media (min-width: 45rem) {
+    width: max(75ch, 70%);
+  }
+}
+
+.container > * {
+  background: hsl(200, 0%, 85%);
+  outline: 1px solid hsl(200, 0%, 54%);
+  padding: 2rem;
+  border-radius: 0.7rem;
+}
+
+.sidebar {
+  flex: 1;
+  align-self: flex-start;
+  display: none;
+
+  @media (min-width: 45rem) {
+    display: revert;
+  }
+}
+
+.sidebar-heading {
+  margin-block-end: 1rem;
+  color: hsl(200, 0%, 45%);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.nav-list > * {
+  margin-block-end: 0.7rem;
+}
+
+.link {
+  color: rgb(85, 26, 139);
+}
+
+.main {
+  flex: 3;
+}
+
+.main-heading {
+  font-size: 1.8rem;
+}
+
+.article {
+  margin-block-start: 3rem;
+  display: grid;
+  gap: 0.5rem;
+}

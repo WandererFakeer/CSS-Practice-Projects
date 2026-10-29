@@ -1,0 +1,109 @@
+@import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --spacer: 1rem;
+}
+
+body{
+  background: #3D3D3D;
+  padding: var(--spacer);
+}
+
+.photo-container{
+  width: min(100%, calc(1200 / 16 * 1rem));
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240 / 16 * 1rem, 100%), 1fr));
+  grid-auto-flow: dense;
+  gap: var(--spacer);
+  
+  @media (min-width : calc(1200 / 16 * 1rem)){
+    perspective: 1000px;
+  }
+  
+}
+
+/* On smaller devices, .space sets the 3D context with perspective */
+.space{
+  perspective: 1000px;
+  
+  @media (min-width : calc(1200 / 16 * 1rem)){
+    perspective: none;
+    transform-style: preserve-3d;
+  }
+  
+}
+
+.photo-flipper{
+  position: relative;
+  will-change: transform;
+  
+  /* Makes children keep their 3D transforms when the parent rotates.
+   Without transform-style: preserve-3d, the back face will not be visible, even after flipping the front face */
+  transform-style: preserve-3d;
+  
+  @media (prefers-reduced-motion: no-preference){
+    transition: transform 1000ms ease-in-out;
+  }
+  
+  @media (min-width : calc(1200 / 16 * 1rem)){
+    transform-style: preserve-3d;
+  }
+  
+}
+
+.space:hover .photo-flipper, .space:focus-within .photo-flipper{
+  transform: rotateY(180deg);
+  
+  @media (prefers-reduced-motion: no-preference){
+    transition: transform 500ms ease-in-out;
+    transition-delay: 200ms;
+  }
+    
+}
+
+.photo-and-caption{
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+  display: grid;
+  place-content: center;
+  backface-visibility: hidden;
+}
+
+.photo-front{
+  display: block;
+  object-fit: cover;
+}
+
+.photo-back{
+  background: white;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-family: "Lily Script One", cursive;
+  
+  /* Make the back side to be positioned absolute, so that it does not reserve its space in th DOM */
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  /* In normal times, make this part invisible, by applying transform: rotateY(180deg); */
+  transform: rotateY(180deg);
+  
+  @media (prefers-reduced-motion: no-preference){
+    background: black;
+    color: white;
+  }
+
+}
+
+p{
+  margin: auto;
+}

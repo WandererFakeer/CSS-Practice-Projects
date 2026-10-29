@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: min(60ch, 800px);
+  background-color: hsl(248, 53%, 80%);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+h1 {
+  background: hsl(52, 100%, 70%);
+  margin: -3rem 0 1.5rem 0;
+  padding: 1rem 0;
+  border-radius: 0.25rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}

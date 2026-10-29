@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(80%, 600px);
+  margin: 3rem auto 0;
+  padding: 8rem 0;
+  outline: 1px solid;
+}
+
+.grid-container {
+  display: grid;
+  place-items: center;
+}
+
+.reputation-icon {
+  background: #130b43;
+  width: 25%;
+  border: 1px solid rgb(136, 0, 254);
+  padding: 0.5rem 0;
+  border-radius: 1.5rem;
+  position: relative;
+}
+
+.reputation-icon-grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.badge {
+  width: 18%;
+}
+
+.reputation-number {
+  color: white;
+  font-size: 0.95rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.rounded-badge {
+  background: #eb5757;
+  width: 1.2rem;
+  aspect-ratio: 1;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: -20%;
+  right: -1%;
+}

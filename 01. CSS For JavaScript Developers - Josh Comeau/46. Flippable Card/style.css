@@ -1,0 +1,71 @@
+@import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: "Lily Script One", cursive;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  display: grid;
+  place-content: center;
+}
+
+/* .space sets the 3D context with perspective */
+.space{
+  perspective: 500px;
+}
+
+.card-link{
+  display: block;
+  text-decoration: none;
+  position: relative;
+  
+  /* Makes children keep their 3D transforms when the parent rotates.
+  Without this, the back face will not be visible, even after flipping the front face */
+  transform-style: preserve-3d;
+  
+  @media (prefers-reduced-motion: no-preference){
+    transition: transform 1000ms ease-in-out;
+  }
+
+}
+
+.space:hover .card-link, .space:focus-within .card-link{
+  transform: rotateY(180deg);
+}
+
+.card{
+  width: clamp(8rem, calc(30vw + 2rem), 20rem);
+  aspect-ratio: 3 / 2;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-content: center;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.card-front{
+  color: #03446A;
+}
+
+.card-back{
+  background: #A20606;
+  color: white;
+  
+  /* Make the back side to be positioned absolute, so that it does not reserve its space in th DOM */
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  /* In normal times, make this part invisible, by applying transform: rotateY(180deg); */
+  transform: rotateY(180deg);
+}

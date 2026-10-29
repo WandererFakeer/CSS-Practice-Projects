@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ebeaea;
+}
+
+.container {
+  background: white;
+  width: min(80%, 600px);
+  margin: 3rem auto 0;
+  padding: 1.5rem;
+  border: 1px solid white;
+  border-radius: 0.2rem;
+}
+
+.grid-container-gap {
+  display: grid;
+  gap: 1rem;
+}
+
+.color {
+  color: #604fcd;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.progress-bar-and-js-logo {
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar {
+  background: #e1ebff;
+  height: 20%;
+  border-radius: 1rem;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.completed-progress {
+  background: linear-gradient(to right, #2200ff 0%, #9e00ff 100%);
+  width: 20%;
+}
+
+.js-logo {
+  width: 10%;
+  position: relative;
+  right: 0.5%;
+}
+
+.exercise-circle-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.6rem;
+}
+
+.completed {
+  background: url("check-circle.svg");
+  background-size: contain;
+}
+
+.in-progress,
+.available {
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.in-progress {
+  background: #6a93ff;
+  border: 1px solid #2e57e8;
+}
+
+.available {
+  border: 1px solid #aaa;
+}

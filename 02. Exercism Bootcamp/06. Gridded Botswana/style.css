@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(80%, 800px);
+  margin: 3rem auto 0;
+  outline: 1px solid;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(3, 20vmin);
+  gap: 1rem;
+}
+
+.blue {
+  background: #6da9d2;
+}
+
+.black {
+  background: black;
+}
+
+.blue {
+  background: #6da9d2;
+}

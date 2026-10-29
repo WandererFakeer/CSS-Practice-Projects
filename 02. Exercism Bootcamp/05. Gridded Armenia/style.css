@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(80%, 800px);
+  margin: 3rem auto 0;
+  outline: 1px solid;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(3, 20vmin);
+}
+
+.yellow {
+  background: #f2a800;
+}
+
+.blue {
+  background: #0033a0;
+}
+
+.red {
+  background: #d90012;
+}

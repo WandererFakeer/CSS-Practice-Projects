@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", sans-serif;
+  line-height: 1.4;
+}
+
+:root{
+  --hue: 35deg;
+  --first-hue-saturation: var(--hue) 30%;
+  --second-hue-saturation: var(--hue) 20%;
+  
+  --first-color: var(--first-hue-saturation) 90%;
+  --second-color: var(--first-hue-saturation) 70%;
+  --third-color: var(--second-hue-saturation) 50%;
+}
+
+.container{
+  background: linear-gradient(to right, hsl(var(--first-color)), hsl(var(--first-color)) 47%, hsl(var(--second-color)) 49.5%, hsl(var(--third-color)) 50%, hsl(var(--second-color)) 50.5%, hsl(var(--first-color)) 53%, hsl(var(--first-color)));
+  
+  width: min(94ch, 100% - 2rem);
+  margin: 2rem auto;
+  outline: 1px solid;
+  padding: 4rem 2rem 2rem;
+  columns: 2;
+  column-gap: 3rem;
+}
+
+h1{
+  margin-block-end: 4rem;
+  font-size: 1.8rem;
+}
+
+.container > p:not(:last-child){
+  margin-block-end: 0.4rem;
+}
+
+p:not(:first-of-type){
+  text-indent: 2rem;
+}
+
+p{
+  text-align: justify;
+  break-inside: avoid;
+}
+
+.first-para:first-letter{
+  margin-inline-end: 0.3em;
+  font-size: 2em;
+  initial-letter: 2;
+  font-weight: 600;
+}
+
+

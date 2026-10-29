@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  background: hsl(200, 0%, 90%);
+  width: min(90%, 600px);
+  height: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.messages {
+  padding: 0.7rem 1rem;
+  border-radius: 0.3rem;
+}
+
+.sent {
+  background: blue;
+  color: white;
+}
+
+.received {
+  background: hsl(200, 0%, 75%);
+  max-width: 55%;
+  align-self: flex-start;
+}
+
+em {
+  text-transform: uppercase;
+}

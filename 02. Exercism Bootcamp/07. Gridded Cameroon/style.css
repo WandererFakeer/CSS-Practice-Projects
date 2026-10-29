@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(90%, 800px);
+  margin: 3rem auto 0;
+  outline: 1px solid;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 70vh;
+}
+
+.green {
+  background: #007a5e;
+}
+
+.red {
+  background: #ce1126;
+  display: grid;
+  place-items: center;
+}
+
+svg {
+  width: 50%;
+}
+
+.yellow {
+  background: #fcd116;
+}

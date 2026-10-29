@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 50%;
+}
+
+body{
+  background: hsl(240deg 100% 90%);
+}
+
+.container{
+  width: min(80%, 100% - 2rem);
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  justify-items: center;
+  gap: 1rem;
+}
+
+.browser-image-container{
+  background: white;
+  aspect-ratio: 1;
+  outline: 2px solid hsl(240deg 100% 75%);
+  padding: 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.browser-link:hover .browser-image-container {
+  transform: translateY(-50%);
+}
+
+.browser-image{
+  max-width: 100%;
+  width: 5rem;
+}

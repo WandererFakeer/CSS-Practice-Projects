@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes appear{
+  from{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    transform: translateY(-10px);
+  }
+  
+  to{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    transform: translateY(0px);
+  }
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  display: grid;
+  place-content: center;
+}
+
+p{
+  background-color: rgb(255, 230, 102);
+  padding: 1rem 2rem;
+  border-radius: 1px;
+  font-size: calc(20 / 16 * 1rem);
+  font-weight: 700;
+  animation: appear 1000ms;
+}
+

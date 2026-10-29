@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(80%, 800px);
+  height: 60vmin;
+  margin: 3rem auto 0;
+  outline: 1px solid;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.red {
+  background: #ce1126;
+}
+
+.yellow {
+  background: #fcd116;
+}
+
+.green {
+  background: #009460;
+}

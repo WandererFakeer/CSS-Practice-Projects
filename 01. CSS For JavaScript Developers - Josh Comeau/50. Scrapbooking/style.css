@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --border-radius: 1px;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  display: grid;
+  place-items: center;
+}
+
+.album{
+  background: rgb(255, 218, 185);
+  width: min(90%, 500 / 16 * 1rem);
+  padding: 4rem;
+  border-radius: var(--border-radius);
+  box-shadow: inset 1px 2px 4px hsl(0deg, 0%, 70%);
+}
+
+.photo-container{
+  background: white;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  position: relative;
+  box-shadow: 1px 2px 4px hsl(0deg, 0%, 70%);
+}
+
+.photo-container::after{
+  content: "💖";
+  font-size: 5rem;
+  line-height: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-40%, -40%);
+  filter: drop-shadow(1px 2px 8px hsl(0deg, 0%, 40%));
+}
+
+img{
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  display: block;
+}

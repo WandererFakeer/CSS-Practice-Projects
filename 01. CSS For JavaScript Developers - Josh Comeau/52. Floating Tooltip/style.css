@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --element-bg-color: rgb(50,51,50);
+  --absolute-bottom: 0;
+  --absolute-left: 50%;
+  --transform-x: -50%;
+  --filter: 0 1px 2px hsl(0, 1%, 20%);
+}
+
+body{
+  background-color: rgb(208,223,251);
+}
+
+.container{
+  background-color: white;
+  width: min(100% - 2rem, 600 / 16 * 1rem);
+  height: calc(150 / 16 * 1rem);
+  margin: 3rem auto;
+  padding: 1rem;
+  outline: 2px solid;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+button{
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 1000ms;
+}
+
+button:hover, button:focus-visible{
+  opacity: 0.7;
+  transition: opacity 350ms;
+}
+
+.arrow-up{
+  background-color: var(--element-bg-color);
+  width: 1rem;
+  aspect-ratio: 1;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  position: absolute;
+  bottom: var(--absolute-bottom);
+  left: var(--absolute-left);
+  transform: translate(var(--transform-x), -190%);
+}
+
+nav{
+  background-color: var(--element-bg-color);
+  width: max-content;
+  border-radius: 1px;
+  position: absolute;
+  bottom: var(--absolute-bottom);
+  left: var(--absolute-left);
+  transform: translate(var(--transform-x), 75%);
+  filter: drop-shadow(var(--filter));
+}
+
+ul{
+  padding: 1rem 2rem 1rem 1rem;
+  list-style: none;
+}
+
+li:not(:last-of-type){
+  margin-block-end: 1rem;
+}
+
+a{
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+}

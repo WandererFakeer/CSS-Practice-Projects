@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    hsl(181, 45%, 85%) 0 60vh,
+    hsl(195deg, 20%, 86%) 60vh 100vh
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  background-attachment: fixed;
+}
+
+.container {
+  width: min(80%, 1024px);
+  margin: 0 auto;
+  padding-block-end: 5rem;
+}
+
+.header-section {
+  width: 65%;
+  padding-block-start: 5rem;
+}
+
+.page-heading {
+  font-size: 2.3rem;
+}
+
+.page-para {
+  margin: 1.5rem 0 4rem;
+  font-size: 1.2rem;
+}
+
+.character-choices {
+  width: 50%;
+  display: grid;
+  gap: 2.5rem;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: static;
+  }
+}
+
+.card {
+  background: white;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  border-radius: 0.4rem;
+  overflow: auto;
+  white-space: nowrap;
+
+  @media (max-width: 600px) {
+    overflow: visible;
+    white-space: normal;
+  }
+}
+
+.number-of-options {
+  margin-inline-start: 0.7rem;
+  color: hsl(0deg, 0%, 30%);
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.size-options-list {
+  margin-block-start: 0.5rem;
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+/* Add an ::after pseudo element and makr it a flex item of .size-options-list unordered list flex container, to be able to have the scrollbar attached to the .card class */
+.size-options-list::after {
+  content: "";
+  flex: 0 0 calc(1.5rem - 0.5rem);
+}
+
+.size-button {
+  padding: 0.6rem 0.7rem;
+  outline: 2px solid rgb(13, 13, 13);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.size-button:hover,
+.size-button:focus-visible {
+  background: rgb(0, 0, 0);
+  outline: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+
+.color-palette {
+  padding: 1.3rem 1.4rem;
+}
+
+.color-palette:hover,
+.color-palette:focus-visible {
+  outline: 5px solid rgb(13, 13, 13);
+}
+
+#skin-1,
+#skin-1:hover,
+#skin-1:focus-visible {
+  background: rgb(106, 67, 37);
+}
+
+#skin-2,
+#skin-2:hover,
+#skin-2:focus-visible {
+  background: rgb(134, 82, 39);
+}
+
+#skin-3,
+#skin-3:hover,
+#skin-3:focus-visible {
+  background: rgb(172, 111, 57);
+}
+
+#skin-4,
+#skin-4:hover,
+#skin-4:focus-visible {
+  background: rgb(189, 126, 71);
+}
+
+#skin-5,
+#skin-5:hover,
+#skin-5:focus-visible {
+  background: rgb(199, 146, 77);
+}
+
+#skin-6,
+#skin-6:hover,
+#skin-6:focus-visible {
+  background: rgb(209, 150, 87);
+}
+
+#skin-7,
+#skin-7:hover,
+#skin-7:focus-visible {
+  background: rgb(222, 178, 125);
+}
+
+#skin-8,
+#skin-8:hover,
+#skin-8:focus-visible {
+  background: rgb(219, 185, 143);
+}
+
+#skin-9,
+#skin-9:hover,
+#skin-9:focus-visible {
+  background: rgb(242, 197, 145);
+}
+
+#skin-10,
+#skin-10:hover,
+#skin-10:focus-visible {
+  background: rgb(239, 208, 169);
+}
+
+#skin-11,
+#skin-11:hover,
+#skin-11:focus-visible {
+  background: rgb(244, 213, 189);
+}
+
+#clothe-1,
+#clothe-1:hover,
+#clothe-1:focus-visible {
+  background: rgb(232, 134, 125);
+}
+
+#clothe-2,
+#clothe-2:hover,
+#clothe-2:focus-visible {
+  background: rgb(255, 213, 128);
+}
+
+#clothe-3,
+#clothe-3:hover,
+#clothe-3:focus-visible {
+  background: rgb(251, 232, 106);
+}
+
+#clothe-4,
+#clothe-4:hover,
+#clothe-4:focus-visible {
+  background: rgb(129, 228, 137);
+}
+
+#clothe-5,
+#clothe-5:hover,
+#clothe-5:focus-visible {
+  background: rgb(163, 220, 220);
+}
+
+#clothe-6,
+#clothe-6:hover,
+#clothe-6:focus-visible {
+  background: rgb(136, 164, 221);
+}
+
+#clothe-7,
+#clothe-7:hover,
+#clothe-7:focus-visible {
+  background: rgb(228, 129, 203);
+}
+
+#clothe-8,
+#clothe-8:hover,
+#clothe-8:focus-visible {
+  background: rgb(236, 121, 150);
+}
+
+#clothe-9,
+#clothe-9:hover,
+#clothe-9:focus-visible {
+  background: rgb(44, 53, 53);
+}
+
+#clothe-10,
+#clothe-10:hover,
+#clothe-10:focus-visible {
+  background: rgb(124, 131, 131);
+}
+
+#clothe-11,
+#clothe-11:hover,
+#clothe-11:focus-visible {
+  background: rgb(213, 221, 221);
+}
+
+svg {
+  height: 500px;
+  position: fixed;
+  top: 5%;
+  left: 60%;
+  bottom: 5%;
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+    margin-block: 1rem;
+    position: static;
+  }
+}
+
+.credit {
+  background: hsl(0deg, 0%, 5%);
+  padding: 4rem 0;
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.credit a {
+  color: inherit;
+}

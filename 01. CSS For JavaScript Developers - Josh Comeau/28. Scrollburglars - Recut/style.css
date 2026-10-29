@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root{
+  --hue-saturation: 200deg 0%;
+  --heading-color: hsl(240deg, 77.8%, 7%);
+  --spacer-extra-small: 1rem;
+  --spacer-small: calc(var(--spacer-extra-small) * 1.5); /* 1.5rem */
+  --spacer-medium: calc(var(--spacer-extra-small) * 2); /* 2rem */
+  --spacer-large: calc(var(--spacer-small) * 2); /* 3rem */
+  --spacer-extra-large: calc(var(--spacer-medium) * 2); /* 4rem */
+  
+  --margin: var(--spacer-medium) var(--spacer-large) /* 2rem 3rem */
+}
+
+body{
+  background: hsl(var(--hue-saturation) 90%);
+}
+
+.header{
+  padding: var(--margin); /* 1rem 3rem */
+}
+
+.navigation{
+  display: flex;
+  align-items: center;
+  gap: var(--spacer-large); /* 3rem */
+}
+
+.logo{
+  max-width: min(2.5rem, 100%);
+  margin-inline-end: auto; 
+}
+
+.first-nav{
+  align-self: center;
+}
+
+.nav-link{
+  color: hsl(var(--hue-saturation) 20%);
+  text-decoration: none;
+}
+
+.container{
+  max-width: 66ch;
+  margin: 1rem auto;
+  padding: 0 var(--spacer-extra-small); /* 1rem */
+  display: grid;
+  gap: var(--spacer-medium); /* 2rem */
+}
+
+.container > *:not(:first-child){
+  line-height: 1.5;
+}
+
+.main-heading{
+  margin-block-end: var(--spacer-extra-small); /* 1rem */
+  color: var(--heading-color);
+  font-size: clamp(1.5rem, 2.5rem, 4rem);
+  font-weight: 1000;
+}
+
+.main-para, .ordered-list, .quote-para{
+  font-size: 1.1rem;
+}
+
+.ordered-list{
+  padding-inline-start : 1.5rem;
+  display: grid;
+  gap: var(--spacer-extra-small); /* 1rem */
+}
+
+.main-sub-heading{
+  margin-block-start: var(--spacer-small); /* 1.5rem */
+  font-size: 1.7rem;
+  color: var(--heading-color);
+}
+
+blockquote{
+  padding-inline-start: var(--spacer-medium); /* 2rem */
+  font-weight: 500;
+}
+
+.quote-para{
+  font-style: italic;
+}
+
+.quote-para + .quote-para{
+  margin-block-start: var(--spacer-medium); /* 2rem */
+}
+
+iframe{
+  width: 90%;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.software-process{
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.download-link{
+  color: hsl(240deg, 77.8%, 6%);
+}

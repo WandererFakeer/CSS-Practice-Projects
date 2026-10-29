@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: min(75ch, 1000px);
+  margin: 1rem auto;
+  outline: 3px solid deeppink;
+  display: flex;
+}
+
+.column {
+  padding: 1rem 1rem 3rem;
+  flex: 1;
+}
+
+.heading + .main-para {
+  margin-block-start: 1rem;
+}
+
+/* To make the flex container only take the height of its first child and ignore its other child, make the ordered list contents of  the second flex item to be positioned as absolute, and make the whole second flex item to be positioned relative to make it the containing block of its ordered list  */
+
+.column:last-of-type {
+  position: relative;
+  overflow: auto;
+}
+
+.ordered-list {
+  padding: 1rem 3rem;
+  position: absolute;
+}
+
+.list-item {
+  padding: 0.2rem;
+}

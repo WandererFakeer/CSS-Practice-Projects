@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.container{
+  background: hsl(247.6, 63.2%, 15%);
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.book-cover{
+  position: sticky;
+  top: 0;
+}
+
+img{
+  max-width: 100%;
+  min-width: 8rem;
+  object-position: -2rem 0;
+}
+
+.review-card {
+  padding-inline-end: 1rem;
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+}
+
+.review{
+  display: grid;
+  gap: 0.5rem;
+}
+
+.author:before{
+  content: "-";
+}
+
+.average-rating {
+  color: gold;
+  font-size: 1.25rem;
+  font-style: italic;
+}

@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: hsl(150, 100%, 90%);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: min(100% - 2rem, 550 / 16 * 1rem);
+}
+
+.recipe {
+  background-image: url("lemons.jpg");
+  background-size: cover;
+  background-position: top right;
+  padding: 1.5rem 2rem;
+  border: 3px solid #e3caa5;
+  border-radius: 1rem;
+}
+
+.grid-container-gap {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.heading {
+  color: #4b3f2f;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.ingredient-list {
+  list-style-type: "🍯 ";
+  padding-left: 2rem;
+  color: #777;
+  font-size: 1.5rem;
+}
+
+.grid-ingredient-list-gap {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.process {
+  width: max(30%, 75%);
+  margin-top: 1rem;
+  color: #4b3f2f;
+  font-size: 1.3rem;
+}
+
+.tagline {
+  color: #4b3f2f;
+  font-style: italic;
+}
+

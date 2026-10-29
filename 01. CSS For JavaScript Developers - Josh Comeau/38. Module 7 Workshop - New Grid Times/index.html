@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Module 7 Workshop - New Grid Times</title>
+  </head>
+  <body>
+    <!-- 01. Superheader section for small and medium screen sizes -->
+    <header class="superheader">
+      <div class="container">
+        <!-- Superheader layout -->
+        <nav class="superheader-nav">
+          <ul class="superheader-nav-list">
+            <!-- Superheader left side -->
+            <li class="superheader-nav-list-item">
+              <button
+                class="superheader-links"
+                aria-label="Magnifying glass menu"
+              >
+                <img src="assets/magnifying.png" alt="" />
+              </button>
+            </li>
+
+            <li class="superheader-nav-list-item">
+              <button class="superheader-links" aria-label="Hamburger menu">
+                <img src="assets/hamburger.png" alt="" />
+              </button>
+            </li>
+
+            <!-- Superheader right side -->
+            <li class="superheader-nav-list-item last-nav-item">
+              <button class="superheader-links" aria-label="User Menu">
+                <img src="assets/user-icon.png" alt="" />
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- 02. Main Header section for larger screen sizes -->
+
+      <!-- Main Header section layout -->
+      <header class="main-header">
+        <!-- Main Header section left side -->
+        <nav class="main-header-nav">
+          <ul class="main-header-nav-list">
+            <li class="main-nav-list-item">
+              <button class="main-nav-links" aria-label="Magnifying glass menu">
+                <img src="assets/magnifying.png" alt="" />
+              </button>
+            </li>
+
+            <li class="main-nav-list-item">
+              <button class="main-nav-links" aria-label="Hamburger menu">
+                <img src="assets/hamburger.png" alt="" />
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <h1 class="site-name">New Grid Times</h1>
+
+        <button class="subscribe-button" id="#subscribe-button">
+          Subscribe
+        </button>
+
+        <p class="header-date">Saturday, June 17th, 2021</p>
+
+        <a href="#subscribe-button" class="subscribe-link"
+          >Already a subscriber?</a
+        >
+      </header>
+
+      <!-- 03. Main section -->
+      <main class="main">
+        <!-- Main section featured side -->
+        <article class="featured-article">
+          <div class="image-container">
+            <img
+              src="assets/gamepad@2x.jpg"
+              alt="Featured Article Image of Game Launcher"
+              class="article-image"
+            />
+          </div>
+
+          <h2 class="featured-article-header">
+            Study: Video games improve reflexes and critical thinking
+          </h2>
+
+          <p class="featured-article-para first-para">
+            SAN FRANCISCO — 24-year-old Anthony Vega enjoyed killing zombies,
+            but didn't realize that those skills were preparing him for work in
+            the 21st century. It turns out, games like
+            <em class="emphasized-words">Super Mario Brothers</em> and
+            <em class="emphasized-words">Mega Zombie Bash 2099</em> have a
+            surprising correlation with in-demand skills like critical reason-
+            ing and abstract thinking.
+          </p>
+
+          <p class="featured-article-para second-para">
+            Researchers in the San Francisco think-tank
+            <em class="emphasized-words">Bestcap Innovations</em> posit that
+            time spent playing video games can be productive, in moderation.
+            Active practice can boost reflexes, skills that will come in handy
+            regardless of your view of the future. Even in the event of a zombie
+            apocalypse, time spent in
+            <em class="emphasized-words">Mega Zombie Bash 2099</em> should have
+            a powerful impact.
+          </p>
+
+          <p class="featured-article-para third-para">
+            Not everyone views it the same way, though. David Davidson Sr.,
+            professor at LIT University, tells
+            <em class="emphasized-words">The Grid</em> that any benefits are
+            overshadowed by the social isolation caused by long play sessions,
+            alone in a dark basement. “We don't celebrate the...
+          </p>
+
+          <p class="continue-featured">Continue Reading</p>
+        </article>
+
+        <!-- Main section secondary side -->
+
+        <!-- Main section secondary side layout -->
+        <section class="secondary-stories">
+          <div class="secondary-story">
+            <img
+              src="assets/politicians@2x.jpg"
+              alt="Secondary article image of politicians"
+              class="secondary-image"
+            />
+
+            <div class="secondary-text">
+              <h3 class="secondary-heading">
+                Politicians scramble as court overrules invalid legislation
+              </h3>
+              <p class="secondary-para">
+                In a surprising judgment that surprised no one, the New
+                Amsterdam court of appeals finds Bill 234...
+              </p>
+            </div>
+          </div>
+
+          <div class="secondary-story">
+            <img
+              src="assets/old-car@2x.jpg"
+              alt="Secondary article image of yellow vintage car"
+              class="secondary-image"
+            />
+
+            <div class="secondary-text">
+              <h3 class="secondary-heading">
+                Vintage cars fetch a premium as car industry shifts gears
+              </h3>
+              <p class="secondary-para">
+                Lorem ipsum dolor latin words hello this paragraph needs to be 3
+                lines long at all times, with an ellipsis near the...
+              </p>
+            </div>
+          </div>
+
+          <div class="secondary-story">
+            <img
+              src="assets/fashion@2x.jpg"
+              alt="Secondary article image of a person wearing dark red sweater with shopping bags"
+              class="secondary-image"
+            />
+
+            <div class="secondary-text">
+              <h3 class="secondary-heading">
+                This season's hottest fashions unveiled amidst designer
+                controversy
+              </h3>
+              <p class="secondary-para">
+                Lorem ipsum dolor latin words hello this paragraph needs to be 3
+                lines long at all times, with an ellipsis near the...
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Main section opinion side -->
+        <section class="opinions">
+          <h2 class="opinion-heading">Opinion</h2>
+
+          <div class="all-opinions">
+            <div class="opinion">
+              <div class="author-name-and-avatar">
+                <p class="opinion-author">Stephen Abebe</p>
+
+                <img
+                  src="assets/avatar-stephen-abebe.jpg"
+                  alt="Opinion article avatar of author Stephen Abebe"
+                  class="opinion-author-avatar"
+                />
+              </div>
+
+              <h3 class="opinion-heading">
+                Humans need water to survive, and so do your potted plants!
+              </h3>
+            </div>
+
+            <div class="opinion">
+              <div class="author-name-and-avatar">
+                <p class="opinion-author">Mario DeLuciano</p>
+
+                <img
+                  src="assets/avatar-mario-deluciano.jpg"
+                  alt="Opinion article avatar of author Mario DeLuciano"
+                  class="opinion-author-avatar"
+                />
+              </div>
+
+              <h3 class="opinion-heading">
+                Sports! The secret to winning big??
+              </h3>
+            </div>
+
+            <div class="opinion">
+              <div class="author-name-and-avatar">
+                <p class="opinion-author">Alice Smith</p>
+
+                <img
+                  src="assets/avatar-alice-smith.jpg"
+                  alt="Opinion article avatar of author Alice Smith"
+                  class="opinion-author-avatar"
+                />
+              </div>
+
+              <h3 class="opinion-heading">
+                Why I'll never buy groceries in- person again
+              </h3>
+            </div>
+
+            <div class="opinion">
+              <div class="author-name-and-avatar">
+                <p class="opinion-author">Rocko Pierce Stanley</p>
+
+                <img
+                  src="assets/avatar-rocko-pierce-stanley.jpg"
+                  alt="Opinion article avatar of author Rocko Pierce Stanley"
+                  class="opinion-author-avatar"
+                />
+              </div>
+
+              <h3 class="opinion-heading">
+                Prediction: Disco is coming back, with a vengeance
+              </h3>
+            </div>
+          </div>
+        </section>
+
+        <!-- Main section advertise side -->
+        <div class="advert-section">
+          <h2 class="advert-heading">— Advertisement —</h2>
+
+          <img
+            src="assets/monkey-advert.png"
+            alt="Advertisement"
+            class="advert"
+          />
+        </div>
+      </main>
+
+      <!-- 04. Aside specialty section -->
+      <aside class="aside-specialty">
+        <!-- Aside specialty market section -->
+        <section class="market">
+          <div class="market-heading-and-more">
+            <h2 class="market-heading">Market</h2>
+            <p class="market-more">Visit Markets data »</p>
+          </div>
+
+          <!-- Aside specialty market section cards layout -->
+          <div class="market-cards">
+            <div class="market-card">
+              <div class="market-card-ticker-and-stock-graph">
+                <h2 class="market-card-ticker">AAPL</h2>
+                <img src="assets/stock-graph-up-1.svg" alt="stock-graph" />
+              </div>
+
+              <div class="market-card-exchange-and-stock">
+                <h3 class="market-card-exchange">NASDAQ</h3>
+                <p class="positive-stock">+4.5%</p>
+              </div>
+            </div>
+
+            <div class="market-card">
+              <div class="market-card-ticker-and-stock-graph">
+                <h2 class="market-card-ticker">AMC</h2>
+                <img src="assets/stock-graph-up-2.svg" alt="stock-graph" />
+              </div>
+
+              <div class="market-card-exchange-and-stock">
+                <h3 class="market-card-exchange">NYSE</h3>
+                <p class="positive-stock">+7.9%</p>
+              </div>
+            </div>
+
+            <div class="market-card">
+              <div class="market-card-ticker-and-stock-graph">
+                <h2 class="market-card-ticker">ENB</h2>
+                <img src="assets/stock-graph-down-1.svg" alt="stock-graph" />
+              </div>
+
+              <div class="market-card-exchange-and-stock">
+                <h3 class="market-card-exchange">TSE</h3>
+                <p class="negative-stock">-2.4%</p>
+              </div>
+            </div>
+
+            <div class="market-card">
+              <div class="market-card-ticker-and-stock-graph">
+                <h2 class="market-card-ticker">GOOG</h2>
+                <img src="assets/stock-graph-up-3.svg" alt="stock-graph" />
+              </div>
+
+              <div class="market-card-exchange-and-stock">
+                <h3 class="market-card-exchange">NASDAQ</h3>
+                <p class="positive-stock">+7.9%</p>
+              </div>
+            </div>
+
+            <div class="market-card">
+              <div class="market-card-ticker-and-stock-graph">
+                <h2 class="market-card-ticker">AMZN</h2>
+                <img src="assets/stock-graph-down-2.svg" alt="stock-graph" />
+              </div>
+
+              <div class="market-card-exchange-and-stock">
+                <h3 class="market-card-exchange">NASDAQ</h3>
+                <p class="negative-stock">-2.4%</p>
+              </div>
+            </div>
+
+            <div class="market-card">
+              <div class="market-card-ticker-and-stock-graph">
+                <h2 class="market-card-ticker">MSFT</h2>
+                <img src="assets/stock-graph-down-3.svg" alt="stock-graph" />
+              </div>
+
+              <div class="market-card-exchange-and-stock">
+                <h3 class="market-card-exchange">NASDAQ</h3>
+                <p class="positive-stock">+4.5%</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Aside specialty sports section -->
+        <section class="sports">
+          <div class="sports-heading-and-more">
+            <h2 class="sports-heading">Sports</h2>
+            <p class="sports-more">Visit Sports page »</p>
+          </div>
+
+          <!-- Aside specialty sports section cards layout -->
+          <div class="sports-cards">
+            <div class="sports-card">
+              <img
+                src="assets/habs@2x.jpg"
+                alt="An ice hockey player with goalie mask"
+                class="sports-card-image"
+              />
+
+              <h3 class="sports-card-heading">
+                Montreal Canadiens hope to settle the score in Vegas
+              </h3>
+            </div>
+
+            <div class="sports-card">
+              <img
+                src="assets/bicycles@2x.jpg"
+                alt="Bicycle racers racing"
+                class="sports-card-image"
+              />
+
+              <h3 class="sports-card-heading">
+                In surprise move, the Tour de France moves to Belgium
+              </h3>
+            </div>
+
+            <div class="sports-card">
+              <img
+                src="assets/football@2x.jpg"
+                alt="An American football player"
+                class="sports-card-image"
+              />
+
+              <h3 class="sports-card-heading">
+                The Texas Giants eke out a victory after a late-game touchdown
+              </h3>
+            </div>
+
+            <div class="sports-card">
+              <img
+                src="assets/decathlon@2x.jpg"
+                alt="Runners running in a race"
+                class="sports-card-image"
+              />
+
+              <h3 class="sports-card-heading">
+                The surprising result for this summer decathlon
+              </h3>
+            </div>
+
+            <div class="sports-card">
+              <img
+                src="assets/coach@2x.jpg"
+                alt="A coach is preparing for training"
+                class="sports-card-image"
+              />
+
+              <h3 class="sports-card-heading">
+                Behind the scenes: Coaching a little league team
+              </h3>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <!-- 05. Footer section -->
+
+    <!-- Footer First section -->
+    <footer class="footer-one">
+      <div class="container">
+        <!-- Footer First internal company links section -->
+        <div class="company-internal-and-social-links">
+          <ul class="footer-company-list">
+            <li class="footer-company-list-item">
+              <a href="#about-us" class="company-internal-link">About us</a>
+            </li>
+
+            <li class="footer-company-list-item">
+              <a href="press-releases" class="company-internal-link"
+                >Press Releases</a
+              >
+            </li>
+
+            <li class="footer-company-list-item">
+              <a href="contact-us" class="company-internal-link">Contact us</a>
+            </li>
+          </ul>
+
+          <ul class="footer-company-list">
+            <li class="footer-company-list-item">
+              <a href="" class="social-link">
+                <img
+                  src="assets/twitter-logo.png"
+                  alt="Twitter link"
+                  class="social-svg"
+                />
+              </a>
+            </li>
+
+            <li class="footer-company-list-item">
+              <a href="" class="social-link">
+                <img
+                  src="assets/facebook-logo.png"
+                  alt="Facebook link"
+                  class="social-svg"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Footer First news category section -->
+        <div class="various-news-categories">
+          <div class="news-category">
+            <h3 class="news-category-heading">Discover Content</h3>
+
+            <ul class="news-category-list">
+              <li class="news-category-list-item">
+                <a href="#politics" class="news-category-link">Politics</a>
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#world" class="news-category-link">World</a>
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#financial" class="news-category-link">Financial</a>
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#sports-and-entertainment" class="news-category-link"
+                  >Sports and Entertainment</a
+                >
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#opinion-and-editorials" class="news-category-link"
+                  >Opinion and Editorials</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="news-category">
+            <h3 class="news-category-heading">Regional Websites</h3>
+
+            <ul class="news-category-list">
+              <li class="news-category-list-item">
+                <a href="#the-grid-united-states" class="news-category-link"
+                  >The Grid United States</a
+                >
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#the-grid-europe" class="news-category-link"
+                  >The Grid Europe</a
+                >
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#the-grid-asia" class="news-category-link"
+                  >The Grid Asia</a
+                >
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#the-grid-mars-and-beyond" class="news-category-link"
+                  >The Grid Mars and Beyond</a
+                >
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#the-grid-australia" class="news-category-link"
+                  >The Grid Australia</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="news-category">
+            <h3 class="news-category-heading">Careers</h3>
+
+            <ul class="news-category-list">
+              <li class="news-category-list-item">
+                <a href="#open-positions" class="news-category-link"
+                  >Open positions</a
+                >
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#meet-the-team" class="news-category-link"
+                  >Meet the team</a
+                >
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#company-culture" class="news-category-link"
+                  >Company culture</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="news-category">
+            <h3 class="news-category-heading">Legal and Privacy</h3>
+
+            <ul class="news-category-list">
+              <li class="news-category-list-item">
+                <a href="#privacy-policy" class="news-category-link"
+                  >Privacy Policy</a
+                >
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#use-of-cookies" class="news-category-link"
+                  >Use of cookies</a
+                >
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#manage-cookies" class="news-category-link"
+                  >Manage Cookies</a
+                >
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#legal-notice" class="news-category-link"
+                  >Legal notice</a
+                >
+              </li>
+
+              <li class="news-category-list-item">
+                <a href="#terms-and-conditions" class="news-category-link"
+                  >Terms and Conditions</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer Second section -->
+    <footer class="footer-two">
+      <div class="container footer-text-centering">
+        <h2 class="company-name-footer">New Grid Times</h2>
+        <p class="copyright">
+          &copy; 2021 Fake Company Ltd. All Rights Reserved
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

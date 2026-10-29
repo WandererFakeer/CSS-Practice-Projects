@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+.container{
+  width: min(90%, 700px);
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+.thanks-message{
+  padding: 0.6rem 1.2rem;
+  box-shadow: 0px 2px 20px hsl(0deg 0% 0% / 0.35);
+  border-radius: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkmark-container {
+  background: forestgreen;
+  width: 2.8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+
+.checkmark {
+  width: 0.6rem;
+  height: 1.2rem;
+  border-bottom: 2px solid white; 
+  border-right: 2px solid white;
+  transform: rotate(45deg) translate(-20%, -10%);
+}
+
+.participate-message{
+  flex: 1;
+}

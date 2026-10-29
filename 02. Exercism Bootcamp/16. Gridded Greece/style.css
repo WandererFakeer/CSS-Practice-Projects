@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(95%, 800px);
+  height: 60vmin;
+  margin: 3rem auto 0;
+  outline: 1px solid;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 5fr 4fr;
+}
+
+.upper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.upper-left {
+  display: grid;
+  grid-template-columns: 4fr 1.5fr 4fr;
+}
+
+.upper-right {
+  display: grid;
+}
+
+.lower {
+  display: grid;
+}
+
+.blue {
+  background: #0d5eaf;
+}

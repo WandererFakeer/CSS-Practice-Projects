@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(80%, 800px);
+  height: 60vmin;
+  margin: 3rem auto 0;
+  outline: 1px solid;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 1.5fr 1fr 1.5fr;
+  gap: 1rem;
+}
+
+.red {
+  background: #ce1126;
+}
+
+.blue {
+  background: #0c1c8c;
+}
+
+.green {
+  background: #3a7728;
+}

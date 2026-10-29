@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.photo-viewer {
+  width: min(100% - 2rem, 800px);
+  margin: 0.3rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "cat-small cat-large cat-large" "dog cat-large cat-large";
+  gap: 0.3rem;
+}
+
+.cat-1 {
+  grid-area: cat-small;
+}
+
+.dog {
+  grid-area: dog;
+}
+
+.cat-2 {
+  grid-area: cat-large;
+}
+
+.image {
+  max-width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.3rem;
+  object-fit: cover;
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.click {
+  padding: 0.3rem 0.4rem;
+  box-shadow: 1px 1px 2px hsl(200, 0%, 30%);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.click:hover,
+.click:focus-visible {
+  background: rgb(0 0 0 / 0.3);
+}

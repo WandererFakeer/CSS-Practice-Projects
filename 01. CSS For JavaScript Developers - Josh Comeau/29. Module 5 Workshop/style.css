@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary-color: 200deg 0%;
+
+  --space-extra-small: 1rem;
+  --space-small: 1.5rem;
+  --space-medium: 2rem;
+  --space-large: 3rem;
+  --space-extra-large: 4rem;
+  --space-extra-extra-large: 5rem;
+
+  --custom-spacer: calc(var(--space-extra-small) / 5); /* 0.2rem */
+}
+
+.container {
+  width: min(95%, 1300px);
+  margin: 0 auto;
+}
+
+/* 01. Superheader section */
+.superheader {
+  display: none;
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    background: hsl(var(--primary-color) 20%);
+    padding: var(--space-extra-small) 0; /* 1rem 0 */
+    color: hsl(var(--primary-color) 90%);
+    display: revert;
+  }
+}
+
+.flex-superheader {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-small); /* 1.5rem */
+  }
+}
+
+.superheader-help {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: flex;
+    gap: var(--space-small); /* 1.5rem */
+  }
+}
+
+.searchbar {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    padding: var(--custom-spacer) calc(var(--space-extra-small) / 2); /* 0.2rem 0.5rem */
+    border-radius: var(--custom-spacer); /* 0.2rem */
+  }
+}
+
+.superheader-link {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.shopping-bag {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    max-width: 100%;
+    width: 3%;
+  }
+}
+
+/* 02. Header section */
+.header {
+  padding: var(--space-extra-small) 0; /* 1rem 0 */
+  border-bottom: 0.1rem solid hsl(var(--primary-color) 70%);
+  display: flex;
+  align-items: center;
+  gap: var(--space-small); /* 1.5rem */
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    align-items: baseline;
+  }
+}
+
+/* flex: 1 makes flex-basis to be 0.
+So it sets the hypothetical size of both sides to be 0.
+Then it distributes extra space to the flex items, according to     flex-grow ratio.
+The right side does not have any content, but the left side do have content.
+It checks how much free space is there.
+The free space is everything other than the unordered list items. 
+So, it then consumes all of the free space, and distributes that free space to the flex items according to their flex grow ratio.
+As both sides share equal flex-grow of 1, them share and consume the free space equally between them.
+So, the unordered list has no choice, but to sit in the middle */
+
+.equal-spacer {
+  flex: 1;
+}
+
+.logo {
+  color: hsl(var(--primary-color) 10%);
+  font-size: clamp(1rem, 1vw + 1rem, 2rem);
+}
+
+.nav {
+  display: none;
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: revert;
+  }
+}
+
+.nav-list {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    list-style: none;
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.1rem);
+    font-weight: 550;
+    text-transform: uppercase;
+    display: flex;
+    gap: clamp(0.5rem, 1vw + 1rem, 3rem);
+  }
+}
+
+.nav-link {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    color: hsl(var(--primary-color) 20%);
+    text-decoration: none;
+  }
+}
+
+.first-nav {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    color: slateblue;
+  }
+}
+
+.image-link {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: none;
+  }
+}
+
+.only-small-screens {
+  display: flex;
+  align-items: center;
+  gap: var(--space-small); /* 1.5rem */
+}
+
+.icon {
+  flex: 1;
+}
+
+.shopping-bag {
+  width: 2rem;
+  min-width: 2rem;
+  max-width: 100%;
+}
+
+/* 03. Sidebar and Main section */
+.sidebar-main {
+  margin: var(--space-small) 0; /* 1.5rem 0 */
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    padding: var(--space-small) 0; /* 1.5rem 0 */
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+}
+
+/* 03. I. Aside section */
+.sidebar {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    align-self: flex-start;
+    position: sticky;
+    top: 0;
+  }
+}
+
+.sidebar * {
+  margin-block-end: var(--space-extra-small); /* 1rem */
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    margin-block-end: var(--space-extra-small); /* 1rem */
+  }
+}
+
+.aside-heading-link {
+  color: hsl(var(--primary-color) 20%);
+  font-size: calc(14 / 16 * 1rem);
+  text-decoration: none;
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    color: hsl(var(--primary-color) 20%);
+    font-size: calc(14 / 16 * 1rem);
+    text-decoration: none;
+  }
+}
+
+.aside-nav {
+  display: none;
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: revert;
+    margin-block-start: var(--space-medium); /* 2rem */
+  }
+}
+
+.sports-list {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    list-style: none;
+  }
+}
+
+.sports-link {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    color: hsl(var(--primary-color) 15%);
+    font-size: calc(17 / 16 * 1rem);
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+.selected-sports-link {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    color: hsl(347.6deg 93.99% 29.71%);
+  }
+}
+
+/* 03. II. Main section */
+.main-header {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: flex;
+  }
+}
+
+.category {
+  margin-block-end: var(--space-small); /* 1.5rem */
+  color: hsl(var(--primary-color) 15%);
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    margin-inline-end: auto;
+  }
+}
+
+.sorting {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-extra-small); /* 1rem */
+  }
+}
+
+.sort {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    color: hsl(var(--primary-color) 35%);
+    font-weight: 500;
+  }
+}
+
+select {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    background: hsl(var(--primary-color) 85%);
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    color: hsl(var(--primary-color) 20%);
+    font-size: calc(17 / 16 * 1rem);
+    font-weight: 500;
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-small); /* 1.5rem */
+}
+
+.card {
+  background: hsl(200, 0%, 95%);
+  border-radius: 0.3rem;
+  position: relative;
+}
+
+.shoe-image {
+  width: 100%;
+  display: block;
+}
+
+.card-text {
+  margin-block-start: 0.2rem;
+  padding: 0.5rem;
+  font-weight: 450;
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  gap: 0.4rem;
+}
+
+.old-price {
+  color: hsl(200, 0%, 35%);
+  text-decoration: line-through;
+}
+
+.new-price {
+  color: hsl(347.6deg 93.99% 29.71%);
+}
+
+.color-quantity {
+  color: hsl(200, 0%, 35%);
+}
+
+.shoe-tag {
+  background: slateblue;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.1rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  position: absolute;
+  top: calc(12 / 16 * 1rem);
+  right: 0.1rem;
+}
+
+.sale-tag {
+  background: hsl(347.6deg 93.99% 29.71%);
+}

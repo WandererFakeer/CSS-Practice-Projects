@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* -- Common Container */
+.container {
+  width: min(90%, 1300px);
+  margin: 0 auto;
+}
+
+/* -- 01. Superheader Section */
+.superheader {
+  display: none;
+
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    background: hsl(200, 0%, 20%);
+    display: revert;
+  }
+}
+
+.superheader-container {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    padding: 0.7rem 0;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.superheader-line {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    margin-inline-end: auto;
+  }
+}
+
+.glass {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    background: hsl(200, 0%, 90%);
+    width: 1rem;
+    aspect-ratio: 1;
+    outline: 1px solid hsl(200, 0%, 40%);
+    border-radius: 50%;
+  }
+}
+
+.handle {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    background: hsl(200, 0%, 90%);
+    width: 0.8rem;
+    outline: 1px solid hsl(200, 0%, 40%);
+    transform: rotate(50deg) translateX(155%);
+    transform-origin: top left;
+  }
+}
+
+.search-bar {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    margin-block-start: 0;
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.2rem;
+  }
+}
+
+.help-link,
+.cart-link {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    margin-inline-start: 1rem;
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* -- 02. Header Section */
+.header {
+  border-bottom: 0.1rem solid hsl(200, 0%, 60%);
+  padding: 0.7rem 0;
+}
+
+.nav-flex {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2rem;
+  }
+}
+
+.space-equilizer {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    /* flex: 1 makes flex-basis to be 0.
+  So it sets the hypothetical size of both sides to be 0.
+  Then it distributes extra space to the flex items, according to     flex-grow ratio.
+  The right side does not have any content, but the left side do have content.
+  It checks how much free space is there.
+  The free space is everything other than the unordered list items. 
+  So, it then consumes all of the free space, and distributes that free space to the flex items according to their flex grow ratio.
+  As both sides share equal flex-grow of 1, them share and consume the free space equally between them.
+  So, the unordered list has no choice, but to sit in the middle */
+
+    flex: 1;
+  }
+}
+
+.nav-list-flex {
+  display: none;
+
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    list-style: none;
+    font-size: 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+.nav-item {
+  margin-block-start: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav-list-item-second {
+  color: purple;
+}
+
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 03. Aside and Main Section */
+.aside-main {
+  margin: 2rem 0 0;
+}
+
+.aside-main-grid {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 1rem;
+  }
+}
+
+.aside {
+  display: none;
+
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    display: revert;
+    align-self: flex-start;
+    position: sticky;
+    top: 0;
+  }
+}
+
+.aside-para + .sports-list {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    margin-block-start: 3rem;
+  }
+}
+
+.sports-list {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    list-style: none;
+  }
+}
+
+.sports-list > * {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    margin: 1rem 0;
+    font-weight: 450;
+  }
+}
+
+.sports-link {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.main-header {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+  }
+}
+
+.main-header-heading {
+  margin: 2rem 0 1rem;
+  font-weight: 500;
+
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    margin: 0;
+  }
+}
+
+.sorting-part {
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+}
+
+.main-header-para {
+  font-size: 1.1rem;
+}
+
+.dropdown {
+  margin-block-end: 2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-grid {
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+
+  @media (min-width: calc(1000 / 16 * 1rem)) {
+    margin-block-start: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+  }
+}
+
+.card {
+  background: hsl(200, 0%, 95%);
+  border-radius: 0.3rem;
+  position: relative;
+}
+
+.shoe-image {
+  max-width: 100%;
+  aspect-ratio: 1.5 / 1;
+  object-fit: contain;
+}
+
+.card-text {
+  margin-block-start: 0.2rem;
+  padding: 0.5rem;
+  font-weight: 450;
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  gap: 0.4rem;
+}
+
+.old-price {
+  color: hsl(200, 0%, 35%);
+  text-decoration: line-through;
+}
+
+.new-price {
+  color: hsl(347.6deg 96.61% 30.11%);
+}
+
+.color-quantity {
+  color: hsl(200, 0%, 35%);
+}
+
+.shoe-tag {
+  background: slateblue;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.1rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  position: absolute;
+  top: 1rem;
+  right: 0.1rem;
+}
+
+.sale-tag {
+  background: hsl(347.6deg 96.61% 30.11%);
+}

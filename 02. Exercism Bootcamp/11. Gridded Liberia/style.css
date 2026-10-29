@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(90%, 800px);
+  margin: 3rem auto 0;
+  outline: 1px solid;
+}
+
+.upper {
+  display: grid;
+  grid-template-columns: 33% 1fr;
+}
+
+.upper-left {
+  background: #002868;
+  display: grid;
+  place-items: center;
+}
+
+svg {
+  width: 30%;
+}
+
+.upper-right {
+  display: grid;
+}
+
+.red {
+  background: #bf0a30;
+  height: 5vmin;
+}
+
+.white {
+  height: 5vmin;
+}

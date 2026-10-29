@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.recipe {
+  width: 45%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 4rem 0 1rem 0;
+  font-size: 2rem;
+}
+
+p {
+  width: min(60ch, 100%);
+  margin-bottom: 1.5rem;
+}
+
+article a {
+  color: #ab0d62;
+  text-decoration: none;
+}
+
+article a:hover,
+article a:focus-visible {
+  text-decoration: underline;
+}
+
+aside {
+  width: min(60ch, 100%);
+  background: peachpuff;
+  margin-bottom: 3rem;
+  border: 2px solid;
+  padding: 1rem;
+}
+
+aside p:last-child {
+  margin-bottom: 0;
+}
+
+aside a {
+  color: black;
+  text-decoration: underline;
+}
+
+aside a:hover,
+aside a:focus-visible {
+  text-decoration: none;
+}

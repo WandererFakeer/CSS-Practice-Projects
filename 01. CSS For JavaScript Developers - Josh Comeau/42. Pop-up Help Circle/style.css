@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --spacer: 2rem;
+}
+
+@keyframes slide-up {
+  from {
+    /* 100% of its own height in Y axis, plus the bottom inset of 2rem */
+    transform: translateY(calc(100% + var(--spacer)));
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.helper {
+  background: rgb(106, 90, 205);
+  width: 3rem;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 5px hsl(200, 0%, 75%);
+  border-radius: 50%;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+
+  position: fixed;
+  bottom: var(--spacer);
+  right: var(--spacer);
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: slide-up 1000ms backwards;
+    animation-delay: 1000ms;
+  }
+}

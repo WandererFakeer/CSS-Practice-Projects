@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --spacer: 1rem;
+  --color-one: hsl(0, 0%, 20%);
+  --color-two: rgb(230, 230, 230);
+  --color-three: rgb(106, 90, 205);
+  --color-four: rgb(149, 6, 35);
+  --color-five: rgb(106, 90, 205);
+  --font-weight: 550;
+}
+
+@keyframes tag-scaling {
+  0% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+
+  30% {
+    transform: scale(1.1);
+  }
+
+  45% {
+    transform: scale(1.1);
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes tag-blinking {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+
+  30% {
+    opacity: 0.5;
+  }
+
+  45% {
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  width: min(95%, calc(1300 / 16 * 1rem));
+  margin-inline: auto;
+}
+
+/* 01. Super Header section */
+.super-header {
+  border-block-end: 5px solid var(--color-one);
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: revert;
+    background: var(--color-one);
+    border-block-end: none;
+    padding-block: calc(var(--spacer) / 2);
+    color: var(--color-two);
+  }
+}
+
+.flex-super-header {
+  display: none;
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacer) * 2);
+  }
+}
+
+.superheader-tagline {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    margin-inline-end: auto;
+  }
+}
+
+input {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    padding: 0.2rem;
+    border: none;
+  }
+}
+
+.nav-utility {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    background: var(--color-one);
+  }
+}
+
+/* 02. Header section */
+.header {
+  border-block-end: 1px solid hsl(0, 0%, 85%);
+  padding-block: var(--spacer);
+}
+
+.shopping-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    align-items: center;
+  }
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.shop-name {
+  margin-inline-end: auto;
+  font-size: clamp(1.3rem, calc(1.4rem + 0.2vw), calc(1.5rem + 0.8vw));
+}
+
+.shopping-categories {
+  display: none;
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    justify-self: center;
+    list-style: none;
+    font-size: clamp(1rem, calc(1vw + 0.5rem), 1.1rem);
+    font-weight: var(--font-weight);
+    text-transform: uppercase;
+    display: flex;
+    gap: clamp(1vw, 1.5vw, 2vw);
+  }
+}
+
+.shopping-category:first-of-type {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    color: var(--color-three);
+  }
+}
+
+.shopping-category {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    color: var(--color-one);
+  }
+}
+
+.empty-space {
+  display: none;
+}
+
+.small-screen-header-nav {
+  display: flex;
+  gap: var(--spacer);
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: none;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.nav-utility {
+  max-width: 100%;
+  height: 2rem;
+  padding-block: 0.2rem;
+  display: block;
+}
+
+/* 03. Main section */
+main {
+  padding-block: calc(var(--spacer) * 2);
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    padding-block-start: calc(var(--spacer) * 4);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: start;
+  }
+}
+
+/* 03.I. Main Nav section */
+.main-nav {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: grid;
+    gap: calc(var(--spacer) * 2);
+    position: sticky;
+    top: 0.5rem;
+  }
+}
+
+.main-nav-heading {
+  color: hsl(0, 0%, 40%);
+  font-size: calc(14 / 16 * 1rem);
+}
+
+.main-sports-categories {
+  display: none;
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    list-style: none;
+    color: hsl(0, 0%, 30%);
+    font-size: calc(17 / 16 * 1rem);
+    font-weight: 550;
+    display: grid;
+    gap: calc(var(--spacer) * 0.7);
+  }
+}
+
+.main-sports-category:nth-of-type(3) {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    color: var(--color-four);
+  }
+}
+
+/* 03.II. Main Shopping section */
+article {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    align-self: baseline;
+  }
+}
+
+.article-top {
+  font-weight: var(--font-weight);
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-article-header {
+  margin-block-start: var(--spacer);
+  color: hsl(0, 0%, 25%);
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    margin-block-start: 0;
+  }
+}
+
+.sorting {
+  display: none;
+
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    display: revert;
+  }
+}
+
+span {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    margin-inline-end: var(--spacer);
+    color: hsl(0, 0%, 40%);
+  }
+}
+
+select {
+  @media (min-width: calc(900 / 16 * 1rem)) {
+    color: hsl(0, 0%, 20%);
+    font-size: calc(17 / 16 * 1rem);
+    font-weight: var(--font-weight);
+  }
+}
+
+.article-main {
+  margin-block-start: var(--spacer);
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(260 / 16 * 1rem, 100%), 1fr)
+  );
+  gap: calc(var(--spacer) * 2);
+}
+
+.shoe-details {
+  border-radius: var(--spacer);
+  border: 1px solid hsl(43, 74%, 85%);
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overflow-container {
+  overflow: hidden;
+}
+
+.shoe-image-container {
+  filter: brightness(90%);
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 600ms, filter 2000ms;
+  }
+}
+
+.shoe-details:hover .shoe-image-container,
+.shoe-details:focus-visible .shoe-image-container {
+  @media (prefers-reduced-motion: no-preference) {
+    filter: brightness(100%);
+    transform: scale(1.1);
+    transition: transform 200ms, filter 500ms;
+  }
+}
+
+.shoe-image {
+  max-width: 100%;
+  aspect-ratio: 1.25 / 1;
+  object-fit: cover;
+  object-position: center center;
+  padding: 0.5rem;
+  border-radius: var(--spacer);
+  display: block;
+}
+
+.shoe-text-details {
+  padding: calc(var(--spacer) * 0.5);
+  color: hsl(0, 0%, 35%);
+  font-size: 1rem;
+  font-weight: var(--font-weight);
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  align-items: start;
+  gap: 0.2rem;
+}
+
+.shoe-name {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.shoe-release-tag {
+  padding: calc(var(--spacer) * 0.3) calc(var(--spacer) * 0.5);
+  color: white;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+}
+
+.shoe-release-tag-new {
+  background: var(--color-five);
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: tag-scaling 2000ms infinite both;
+    will-change: transform;
+  }
+}
+
+.shoe-release-tag-sale {
+  background: var(--color-four);
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: tag-blinking 2000ms infinite both;
+    will-change: transform;
+  }
+}
+
+.shoe-old-price {
+  text-decoration: line-through;
+}
+
+.new-price {
+  color: var(--color-four);
+}
+
+.shoe-availability {
+  color: hsl(0deg 6.38% 20.12%);
+}

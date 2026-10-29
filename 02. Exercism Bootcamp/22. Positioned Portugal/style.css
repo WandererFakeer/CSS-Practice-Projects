@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(80%, 800px);
+  height: 50vmin;
+  margin: 3rem auto 0;
+  outline: 1px solid;
+  position: relative;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.green {
+  background: #060;
+}
+
+.portugal-emblem {
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.red {
+  background: #f00;
+}

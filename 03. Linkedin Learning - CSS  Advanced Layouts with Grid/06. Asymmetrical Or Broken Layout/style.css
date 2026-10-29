@@ -1,0 +1,124 @@
+@font-face{
+  font-family: "helvetica";
+  src: url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("woff"),
+       url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("opentype"),
+       url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("truetype");
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "helvetica", sans-serif;
+  line-height: 1.5;
+  
+}
+
+:root{
+  --spacer: 1rem;
+  --color-one: rgb(6, 186, 240);
+  --color-two: rgb(255, 255, 255);
+  --color-three: rgb(76, 91, 92);
+  --color-four: rgb(240, 200, 8);
+  --font-size-one: calc(36 / 16 * 1rem);
+  --font-size-two: calc(18 / 16 * 1rem);
+  --font-size-three: calc(14.4 /16 * 1rem);
+}
+
+.header{
+  background: var(--color-one);
+  padding: var(--spacer);
+}
+
+.logo{
+  width: 100%;
+  height: calc(120 / 16 * 1rem);
+  object-fit: contain;
+}
+
+.main{
+  width: min(90%, calc(1300 / 16 * 1rem));
+  margin: calc(var(--spacer) * 2) auto;
+  display: grid;
+  gap: calc(var(--spacer) * 2);
+  
+  @media (min-width: calc(800 / 16 * 1rem)){
+    grid-template-columns: repeat(2, 1fr);
+  }
+    
+}
+
+.article{
+  align-self: end;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "heading heading heading ."
+                       ". descrip descrip descrip"
+                       ". . robot .";
+  row-gap: var(--spacer);
+}
+
+.article-heading{
+  grid-area: heading;
+  font-size: var(--font-size-one);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.article-description{
+  grid-area: descrip;
+  font-size: var(--font-size-two);
+}
+
+.article-image{
+  grid-area: robot;
+}
+
+.aside{
+  display: grid;
+  grid-template-columns: 1fr 3fr 10fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". first-image first-image"
+                       "second-image second-image ."
+}
+
+.aside-image-one, .aside-image-two{
+  width: 100%;
+  object-fit: cover;
+}
+
+.aside-image-one{
+  grid-area: first-image;
+  grid-row: 1;
+  align-self: stretch;
+}
+
+.aside-image-two{
+  grid-area: second-image;
+  grid-row: 1;
+  align-self: center;
+  aspect-ratio: 0.6;
+}
+
+.footer{
+  background: var(--color-three);
+  margin-block-start: var(--spacer);
+  padding: calc(var(--spacer) * 2) var(--spacer);
+  color: var(--color-two);
+  font-size: var(--font-size-three);
+  text-align: center;
+}
+
+.footer-link{
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-link:last-of-type{
+  text-decoration: revert;
+}
+
+.footer-link:last-of-type:hover, .footer-link:last-of-type:focus-visible{
+  color: var(--color-four);
+}
